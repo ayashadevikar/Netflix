@@ -11,7 +11,46 @@
             
     <!-- navbar -->
 
-    <div class="w-full h-screen banner-img bg-cover bg-center"
+    <!-- mobile view -->
+
+    <div class="md:hidden w-full h-screen banner-img bg-cover bg-center"
+        style="background-image: url('./assets/mobile-banner-img.jpg')">
+      
+        <nav class="flex justify-between mx-8">
+            <img class="h-16 -ml-6" src="./assets/Netflix-Logo.png">
+
+            <div class="flex gap-x-1 mt-4 ">
+     
+                <button class="text-white bg-black rounded-sm border-2 border-white px-2">
+                 <i class="fa-solid fa-globe"></i>
+                  English
+                 <i class="fa-solid fa-chevron-down"></i>
+                
+                </button>
+      
+                <button class="text-white bg-red-700 hover:bg-red-800 rounded-md py-0 px-2 text-xs">Sign In</button>
+             
+              </div>
+        </nav>
+    
+        <h1 class="text-white text-center bg-gray-600 p-1 mt-4">For Educational Purpose Only</h1>
+
+      <div class="text-white flex flex-col gap-y-4 justify-center items-center h-[80vh]">
+         <h1 class="text-3xl font-bold w-62 text-center">Unlimited movies, TV shows and more</h1>
+         <h2 class="">Watch anywhere. Cancel anytime.</h2>
+         <p class="w-60 text-center">Ready to watch? Enter your email to create or restart your membership.</p>
+
+         <div class="flex flex-col gap-y-4">
+            <input class="bg-black outline outline-offset-2 outline-1 p-2 w-full rounded-md py-4" type="email" name="email" id="" placeholder="Email address">
+            <button class="bg-red-700 hover:bg-red-800 text-xl font-semibold rounded-md p-4">Get Started
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+         </div>
+      </div>
+</div>
+
+    <!-- laptop view -->
+    <div class="hidden md:block w-full h-screen banner-img bg-cover bg-center "
         style="background-image: url('./assets/banner-img.jpg')">
       
         <nav class="flex items-center justify-between mx-40">
@@ -26,21 +65,21 @@
                 
                 </button>
       
-                <button class="text-white bg-red-600 rounded-md p-2 px-4">Sign In</button>
+                <button class="text-white bg-red-700 hover:bg-red-800 rounded-md p-2 px-4">Sign In</button>
              
               </div>
         </nav>
     
-        <h1 class="text-white">For Educational Purpose Only</h1>
+        <h1 class="text-white text-center text-4xl bg-gray-600 p-2">For Educational Purpose Only</h1>
 
-      <div class="text-white flex flex-col gap-y-4 items-center">
+      <div class="text-white flex flex-col gap-y-4 justify-center items-center h-[80vh]">
          <h1 class="text-5xl font-bold ">Unlimited movies, TV shows and more</h1>
          <h2 class="text-xl">Watch anywhere. Cancel anytime.</h2>
          <p class="text-xl">Ready to watch? Enter your email to create or restart your membership.</p>
 
          <div class="flex gap-x-4">
             <input class="bg-black outline outline-offset-2 outline-1 p-2 w-full rounded-md py-4" type="email" name="email" id="" placeholder="Email address">
-            <button class="bg-red-700 text-xl font-semibold rounded-md w-60">Get Started
+            <button class="bg-red-700 hover:bg-red-800 text-xl font-semibold rounded-md w-60">Get Started
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
          </div>
@@ -48,15 +87,34 @@
 </div>
 
 <!-- enjoy your tv -->
-<div class="bg-black flex justify-center">
+
+<!-- mobile view -->
+<div class="md:hidden bg-black flex flex-col gap-y-4 mt-2 justify-center items-center p-10">
+    <div class="text-white flex flex-col gap-y-4 justify-center items-center">
+        <h1 class="text-3xl font-bold">Enjoy on your TV</h1>
+        <p class="w-[18rem] text-center">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+    </div>
+
+   <div>
+      <video class="w-[10rem] h-[10rem] items-center " data-uia="nmhp-card-animation-asset-video" autoplay="" playsinline="" muted="" loop="">
+       <source  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v" 
+        type="video/mp4">
+        </video> 
+    </div>
+     
+</div>
+
+<!-- laptop view -->
+<div class="bg-black hidden md:flex justify-center p-10 ">
     <div class="text-white flex flex-col gap-y-4 justify-center">
         <h1 class="text-4xl font-bold">Enjoy on your TV</h1>
         <p class="text-xl w-[30rem]">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
     </div>
-    <div class="h-[40rem] w-[40rem] bg-no-repeat flex " 
-    style="background-image: url('https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png ')">
-      <video  data-uia="nmhp-card-animation-asset-video" autoplay="" playsinline="" muted="" loop="">
-       <source class="w-[35rem] h-[35rem]" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v" 
+
+    <div class="h-[40rem] w-[40rem] bg-no-repeat flex justify-center " 
+       style="background-image: url('https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png ')">
+      <video class="w-[29rem] h-[30rem] items-center absolute z-10" data-uia="nmhp-card-animation-asset-video" autoplay="" playsinline="" muted="" loop="">
+       <source  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v" 
         type="video/mp4">
         </video> 
     </div>
@@ -64,9 +122,62 @@
 </div>
 
 <!-- download your shows -->
-   <div class="bg-black flex justify-center mt-2">
- 
-      <img src="./assets/mobile-0819.jpg">
+
+<!-- mobile view -->
+<div class="md:hidden bg-black text-white flex flex-col mt-2 p-10">
+    <div class="flex flex-col gap-y-4 justify-center">
+        <h1 class="text-3xl font-bold w-60">Download your shows to watch offline</h1>
+        <p class="w-[18rem]">Save your favourites easily and always have something to watch.</p>
+    </div>
+
+
+    <div class="w-[10px] bg-no-repeat flex justify-center " 
+     style="background-image: url('./assets/mobile-0819.jpg')">
+
+        <!-- <div class="flex items-center bg-black gap-x-4 border-2 w-[21rem] h-[6rem] rounded-xl p-2 relative top-[21rem] left-8">
+
+             <img class="h-[5rem] items-center ml-2" src="./assets/boxshot.png">
+
+             <div class="flex gap-x-8 items-center">
+
+  
+                <div class="flex flex-col">
+                    <span class="w-[10rem] font-semibold">Stranger Things</span>
+                    <button class="text-justify text-blue-700">Downloading...</button>
+                </div>  
+
+                        <i class="fa-solid fa-download"></i>
+             </div>
+        </div> -->
+
+    </div>
+  
+
+ </div>
+
+<!-- laptop view -->
+   <div class=" bg-black hidden md:flex justify-center mt-2 p-10 text-white">
+      <div class="w-[36rem] h-[30rem] bg-no-repeat flex justify-center " 
+       style="background-image: url('./assets/mobile-0819.jpg')">
+
+    <div class="flex items-center bg-black gap-x-4 border-2 w-[21rem] h-[6rem] rounded-xl p-2 relative top-[21rem] left-8">
+
+        <img class="h-[5rem] items-center ml-2" src="./assets/boxshot.png">
+
+        <div class="flex gap-x-8 items-center">
+
+    
+              <div class="flex flex-col">
+                    <span class="w-[10rem] font-semibold">Stranger Things</span>
+                    <button class="text-justify text-blue-700">Downloading...</button>
+              </div>
+
+                 <i class="fa-solid fa-download"></i>
+           </div>
+    </div>
+
+   </div>
+
     <div class="text-white flex flex-col gap-y-4 justify-center">
         <h1 class="text-4xl font-bold w-96">Download your shows to watch offline</h1>
         <p class="text-xl w-[31rem]">Save your favourites easily and always have something to watch.</p>
@@ -76,14 +187,32 @@
 
 <!-- watch everywhere -->
 
-<div class="bg-black flex justify-center mt-2">
+<!-- mobile view -->
+
+<div class="md:hidden bg-black flex flex-col justify-center  items-center mt-2 p-10">
+    <div class="text-white flex flex-col gap-y-4 justify-center">
+        <h1 class="text-2xl font-bold text-center">Watch everywhere</h1>
+        <p class="w-[18rem]">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+    </div>
+    <!-- <div class="h-[10rem] w-[10rem] bg-no-repeat flex justify-center" 
+    style="background-image: url('./assets/device-pile-in.png')"> -->
+    <video class="w-[10rem] h-[10rem] items-center" data-uia="nmhp-card-animation-asset-video" autoplay="" playsinline="" muted="" loop="">
+        <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v" 
+        type="video/mp4"></video>
+    </div>
+     
+</div>
+
+
+<!-- laptop view -->
+<div class="bg-black hidden md:flex justify-center mt-2 p-10">
     <div class="text-white flex flex-col gap-y-4 justify-center">
         <h1 class="text-4xl font-bold">Watch everywhere</h1>
         <p class="text-xl w-[30rem]">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
     </div>
-    <div class="h-[40rem] w-[40rem] bg-no-repeat flex " 
-    style="background-image: url('https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png ')">
-    <video data-uia="nmhp-card-animation-asset-video" autoplay="" playsinline="" muted="" loop="">
+    <div class="h-[40rem] w-[40rem] bg-no-repeat flex justify-center" 
+    style="background-image: url('./assets/device-pile-in.png')">
+    <video class="w-[20rem] h-[20rem] items-center" data-uia="nmhp-card-animation-asset-video" autoplay="" playsinline="" muted="" loop="">
         <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v" 
         type="video/mp4"></video>
     </div>
@@ -92,7 +221,21 @@
 
  
      <!-- children -->
-     <div class="bg-black flex justify-center mt-2 p-16">
+
+      <!-- mobile view -->
+
+      <div class="md:hidden bg-black flex flex-col justify-center items-center gap-y-4 mt-2 p-16 ">
+        <div class="text-white flex flex-col gap-y-4 justify-center">
+            <h1 class="text-3xl font-bold w-72 text-center">Create profiles for kids</h1>
+            <p class="w-[19rem]">Send children on adventures with their favourite characters 
+                in a space made just for them—free with your membership.</p>
+       </div>
+        <img class="h-[15rem] w-[20rem]" src="./assets/childrens.png">
+         
+   </div>
+
+     <!-- laptop view -->
+     <div class="bg-black hidden md:flex justify-center mt-2 p-16">
           <img class="h-[25rem]" src="./assets/childrens.png">
            <div class="text-white flex flex-col gap-y-4 justify-center">
                 <h1 class="text-4xl font-bold">Create profiles for kids</h1>
@@ -102,7 +245,32 @@
      </div>
 
      <!-- frequently asked questions -->
-     <div class="bg-black text-white mt-2 flex flex-col items-center gap-y-8 p-10">
+
+     <!-- mobile view -->
+     <div class="md:hidden bg-black text-white mt-2 flex flex-col items-center gap-y-8 p-10">
+        <h1 class="text-3xl font-bold text-center">Frequently Asked Questions</h1>
+         <ul class="flex flex-col gap-y-4 items-center mx-2">
+            <li class="bg-zinc-800 w-80 p-4 hover:bg-zinc-700">What is Netflix</li>
+            <li class="bg-zinc-800 w-80  p-4 hover:bg-zinc-700">How much does Netflix cost?</li>
+            <li class="bg-zinc-800 w-80  p-4 hover:bg-zinc-700">Where can I watch?</li>
+            <li class="bg-zinc-800 w-80  p-4 hover:bg-zinc-700">How do I cancel?</li>
+            <li class="bg-zinc-800 w-80  p-4 hover:bg-zinc-700">What can I watch on Netflix?</li>
+            <li class="bg-zinc-800 w-80  p-4 hover:bg-zinc-700">Is Netflix good for kids?</li>
+         </ul>
+
+         <p class="text-center w-60">Ready to watch? Enter your email to create or restart your membership.</p>
+
+         <!-- email -->
+         <div class="flex flex-col gap-y-4 items-center">
+            <input class="bg-black outline outline-offset-2 outline-1 p-2  rounded-md py-4 w-60" type="email" name="email" id="" placeholder="Email address">
+            <button class="bg-red-700 hover:bg-red-800 text-xl font-semibold rounded-md p-4">Get Started
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+         </div>
+</div>
+
+     <!-- laptop view -->
+     <div class="bg-black text-white mt-2 hidden md:flex flex-col items-center gap-y-8 p-10">
         <h1 class="text-5xl font-bold ">Frequently Asked Questions</h1>
          <ul class="flex flex-col gap-y-4">
             <li class="bg-zinc-800 w-[75rem] p-4 hover:bg-zinc-700">What is Netflix</li>
@@ -118,14 +286,63 @@
          <!-- email -->
          <div class="flex gap-x-4">
             <input class="bg-black outline outline-offset-2 outline-1 p-2  rounded-md py-4 w-80" type="email" name="email" id="" placeholder="Email address">
-            <button class="bg-red-700 text-xl font-semibold rounded-md w-48">Get Started
+            <button class="bg-red-700 hover:bg-red-800 text-xl font-semibold rounded-md w-48">Get Started
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
          </div>
 </div>
 
 <!-- footer -->
-<div class="bg-black text-white flex flex-col gap-x-72 gap-y-10 mt-2 p-10">
+<!--  mobile view -->
+<div class="md:hidden bg-black text-white flex flex-col mt-2 p-10">
+
+    <span>Questions? Call 000-800-919-1694</span>
+
+        <div class="flex flex-col gap-y-2">
+            <ul class="flex flex-col gap-y-2">
+                <li class="underline">FAQ</li>
+                <li class="underline">Media Centre</li>
+                <li class="underline">Ways to Watch</li>
+                <li class="underline">Cookie Preferences</li>
+                <li class="underline">Speed Test</li>
+            </ul>
+
+            <ul class="flex flex-col gap-y-2">
+                 <li class="underline">Help Centre</li>
+                 <li class="underline">Investor Relations</li>
+                 <li class="underline">Terms of Use</li>
+                 <li class="underline">Corporate Information</li>
+                 <li class="underline">Legal Notices</li>
+            </ul>
+
+            <ul class="flex flex-col gap-y-2">
+                 <li class="underline">Account</li>
+                 <li class="underline">Jobs</li>
+                 <li class="underline">Privacy</li>
+                 <li class="underline">Contact Us</li>
+                 <li class="underline">Only on Netflix</li>
+            </ul>
+        </div>
+
+        <div class="flex flex-col gap-y-8 mt-10">
+
+        
+            <button class="text-white bg-black rounded-sm border-2 border-white px-4 w-32 ">
+                 <i class="fa-solid fa-globe"></i>
+                <span>English</span> 
+                <i class="fa-solid fa-chevron-down"></i>
+            
+            </button>
+
+             <span>Netflix India</span>
+        </div>
+     
+</div>
+
+
+
+<!-- laptop view -->
+<div class="bg-black text-white hidden md:flex flex-col gap-x-72 gap-y-10 mt-2 p-10">
 
     <span class="ml-32">Questions? Call 000-800-919-1694</span>
 
