@@ -105,19 +105,26 @@
 </div>
 
 <!-- laptop view -->
-<div class="bg-black hidden md:flex justify-center p-10 ">
+<div class="bg-black hidden md:flex justify-center items-center pb-32">
     <div class="text-white flex flex-col gap-y-4 justify-center">
         <h1 class="text-4xl font-bold">Enjoy on your TV</h1>
         <p class="text-xl w-[30rem]">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
     </div>
 
-    <div class="h-[40rem] w-[40rem] bg-no-repeat flex justify-center " 
+    <div class="pb-20">
+        <img class="absolute  z-[1] h-[25rem] w-[35rem]" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"> 
+        <video class="h-[15rem] w-[28rem] relative left-16 top-10" data-uia="nmhp-card-animation-asset-video" autoplay="" playsinline="" muted="" loop="">
+            <source  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v" 
+             type="video/mp4">
+             </video> 
+    </div>
+    <!-- <div class="h-[40rem] w-[40rem] bg-no-repeat flex justify-center relative z-[1]" 
        style="background-image: url('https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png ')">
-      <video class="w-[29rem] h-[30rem] items-center absolute z-10" data-uia="nmhp-card-animation-asset-video" autoplay="" playsinline="" muted="" loop="">
+      <video class="w-[29rem] h-[30rem] items-center relative z-[2]" data-uia="nmhp-card-animation-asset-video" autoplay="" playsinline="" muted="" loop="">
        <source  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v" 
         type="video/mp4">
         </video> 
-    </div>
+    </div> -->
      
 </div>
 
@@ -210,11 +217,14 @@
         <h1 class="text-4xl font-bold">Watch everywhere</h1>
         <p class="text-xl w-[30rem]">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
     </div>
-    <div class="h-[40rem] w-[40rem] bg-no-repeat flex justify-center" 
-    style="background-image: url('./assets/device-pile-in.png')">
-    <video class="w-[20rem] h-[20rem] items-center" data-uia="nmhp-card-animation-asset-video" autoplay="" playsinline="" muted="" loop="">
+
+    <div class="relative">
+    
+    <video class="absolute left-28 w-[25rem] h-[20rem] z-[1]" data-uia="nmhp-card-animation-asset-video" autoplay="" playsinline="" muted="" loop="">
         <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v" 
         type="video/mp4"></video>
+
+        <img class="relative z-[2]" src="./assets/device-pile-in.png">
     </div>
      
 </div>
@@ -230,7 +240,7 @@
             <p class="w-[19rem]">Send children on adventures with their favourite characters 
                 in a space made just for them—free with your membership.</p>
        </div>
-        <img class="h-[15rem] w-[20rem]" src="./assets/childrens.png">
+        <img class="h-[15rem] w-[20rem] relative z-[2]" src="./assets/childrens.png">
          
    </div>
 
