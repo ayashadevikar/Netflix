@@ -13,7 +13,7 @@
 
     <!-- mobile view -->
 
-    <div class="md:hidden w-full h-screen banner-img bg-cover bg-center"
+    <div class="md:hidden w-full h-screen banner-img bg-cover bg-center bg-[rgba(0,0,0,0.5)]"
         style="background-image: url('./assets/mobile-banner-img.jpg')">
       
         <nav class="flex justify-between mx-8">
@@ -21,19 +21,25 @@
 
             <div class="flex gap-x-1 mt-4 ">
      
-                <button class="text-white bg-black rounded-sm border-2 border-white px-2">
-                 <i class="fa-solid fa-globe"></i>
-                  English
-                 <i class="fa-solid fa-chevron-down"></i>
-                
-                </button>
+                  <button class="lang-button text-white bg-black rounded-sm border-2 border-white px-4 text-center">
+                    <i class="fa-solid fa-globe"></i>
+                     
+                  </button>
+
+                <!-- <div class="lang-button text-white bg-black rounded-sm border-2 border-white px-4 text-center">
+                    <i class="fa-solid fa-globe"></i>
+                     <select class="langauges text-white bg-black ">
+                        <option value="English">English</option>
+                        <option>हिन्दी</option>
+                    </select>
+                </div> -->
       
                 <button class="text-white bg-red-700 hover:bg-red-800 rounded-md py-0 px-2 text-xs">Sign In</button>
              
               </div>
         </nav>
     
-        <h1 class="text-white text-center bg-gray-600 p-1 mt-4">For Educational Purpose Only</h1>
+        
 
       <div class="text-white flex flex-col gap-y-4 justify-center items-center h-[80vh]">
          <h1 class="text-3xl font-bold w-62 text-center">Unlimited movies, TV shows and more</h1>
@@ -50,27 +56,52 @@
 </div>
 
     <!-- laptop view -->
-    <div class="hidden md:block w-full h-screen banner-img bg-cover bg-center "
-        style="background-image: url('./assets/banner-img.jpg')">
+   
+
+    
+    <div class="hidden md:block w-full h-screen banner-img bg-cover bg-center bg-blend-lighten"
+        style="background-image: url('./assets/banner-img.jpg') ">
       
+        <!-- (to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%) -->
+       
         <nav class="flex items-center justify-between mx-40">
             <img class="w-32" src="./assets/Netflix-Logo.png">
 
             <div class="flex gap-x-4">
      
-                <button class="text-white bg-black rounded-sm border-2 border-white px-4">
-                 <i class="fa-solid fa-globe"></i>
-                  English
-                 <i class="fa-solid fa-chevron-down"></i>
-                
+                <div class="flex flex-col">
+                <button class="menu-button text-white bg-black rounded-sm border-2 border-white flex items-center gap-x-2 px-2">
+                    <i class="fa-solid fa-globe"></i>
+                     English
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                      
                 </button>
+                
+                <ul class="menu text-white  hidden mt-4">
+                    <li class="hover:bg-blue-500">English</li>
+                    <li class="hover:bg-blue-500">हिन्दी</li>
+                </ul>
+            </div>
+                <!-- <div class="lang-button text-white bg-black rounded-sm border-2 border-white px-4 text-center">
+                    <i class="fa-solid fa-globe"></i>
+                     <select class="langauges text-white bg-black ">
+                        <option value="English">English</option>
+                        <option>हिन्दी</option>
+                    </select>
+                </div> -->
+                
       
+                
+                
+
                 <button class="text-white bg-red-700 hover:bg-red-800 rounded-md p-2 px-4">Sign In</button>
              
               </div>
         </nav>
     
-        <h1 class="text-white text-center text-4xl bg-gray-600 p-2">For Educational Purpose Only</h1>
+       
 
       <div class="text-white flex flex-col gap-y-4 justify-center items-center h-[80vh]">
          <h1 class="text-5xl font-bold ">Unlimited movies, TV shows and more</h1>
@@ -86,6 +117,7 @@
       </div>
 </div>
 
+<hr class="w-6">
 <!-- enjoy your tv -->
 
 <!-- mobile view -->
@@ -95,13 +127,16 @@
         <p class="w-[18rem] text-center">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
     </div>
 
-   <div>
-      <video class="w-[10rem] h-[10rem] items-center " data-uia="nmhp-card-animation-asset-video" autoplay="" playsinline="" muted="" loop="">
-       <source  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v" 
-        type="video/mp4">
-        </video> 
-    </div>
-     
+
+    <div class="relative">
+    
+        <video class="absolute left-10 top-6 w-[15rem] h-[10rem] z-[1]" data-uia="nmhp-card-animation-asset-video" autoplay="" playsinline="" muted="" loop="">
+            <source  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v" 
+             type="video/mp4">
+             </video> 
+ 
+             <img class="relative z-[2] " src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"> 
+     </div>
 </div>
 
 <!-- laptop view -->
@@ -111,20 +146,16 @@
         <p class="text-xl w-[30rem]">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
     </div>
 
-    <div class="pb-20">
-        <img class="absolute  z-[1] h-[25rem] w-[35rem]" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"> 
-        <video class="h-[15rem] w-[28rem] relative left-16 top-10" data-uia="nmhp-card-animation-asset-video" autoplay="" playsinline="" muted="" loop="">
+    <div class="relative">
+    
+        <video class="absolute left-20 top- w-[30rem] h-[29rem] z-[1]" data-uia="nmhp-card-animation-asset-video" autoplay="" playsinline="" muted="" loop="">
             <source  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v" 
              type="video/mp4">
              </video> 
-    </div>
-    <!-- <div class="h-[40rem] w-[40rem] bg-no-repeat flex justify-center relative z-[1]" 
-       style="background-image: url('https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png ')">
-      <video class="w-[29rem] h-[30rem] items-center relative z-[2]" data-uia="nmhp-card-animation-asset-video" autoplay="" playsinline="" muted="" loop="">
-       <source  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v" 
-        type="video/mp4">
-        </video> 
-    </div> -->
+ 
+             <img class="relative z-[2] " src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"> 
+     </div>
+   
      
 </div>
 
@@ -133,19 +164,19 @@
 <!-- mobile view -->
 <div class="md:hidden bg-black text-white flex flex-col mt-2 p-10">
     <div class="flex flex-col gap-y-4 justify-center">
-        <h1 class="text-3xl font-bold w-60">Download your shows to watch offline</h1>
-        <p class="w-[18rem]">Save your favourites easily and always have something to watch.</p>
+        <h1 class="text-3xl font-bold w-60 text-center">Download your shows to watch offline</h1>
+        <p class="w-[18rem] text-center">Save your favourites easily and always have something to watch.</p>
     </div>
 
 
-    <div class="w-[10px] bg-no-repeat flex justify-center " 
+    <div class="w-[15rem] h-[10rem] bg-no-repeat bg-center bg-cover" 
      style="background-image: url('./assets/mobile-0819.jpg')">
 
-        <!-- <div class="flex items-center bg-black gap-x-4 border-2 w-[21rem] h-[6rem] rounded-xl p-2 relative top-[21rem] left-8">
+        <div class="flex items-center bg-black gap-x-4 border-2  rounded-xl p-2 relative top-24 ">
 
-             <img class="h-[5rem] items-center ml-2" src="./assets/boxshot.png">
+             <img class="h-[3rem] items-center ml-2" src="./assets/boxshot.png">
 
-             <div class="flex gap-x-8 items-center">
+             <div class="flex items-center">
 
   
                 <div class="flex flex-col">
@@ -153,17 +184,19 @@
                     <button class="text-justify text-blue-700">Downloading...</button>
                 </div>  
 
-                        <i class="fa-solid fa-download"></i>
+                <i class="fa-solid fa-download -ml-6"></i> 
              </div>
-        </div> -->
+
+            
+        </div>
 
     </div>
   
 
  </div>
-
+ <hr class="w-6">
 <!-- laptop view -->
-   <div class=" bg-black hidden md:flex justify-center mt-2 p-10 text-white">
+   <div class=" bg-black hidden md:flex justify-center p-10 text-white">
       <div class="w-[36rem] h-[30rem] bg-no-repeat flex justify-center " 
        style="background-image: url('./assets/mobile-0819.jpg')">
 
@@ -201,13 +234,14 @@
         <h1 class="text-2xl font-bold text-center">Watch everywhere</h1>
         <p class="w-[18rem]">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
     </div>
-    <!-- <div class="h-[10rem] w-[10rem] bg-no-repeat flex justify-center" 
-    style="background-image: url('./assets/device-pile-in.png')"> -->
-    <video class="w-[10rem] h-[10rem] items-center" data-uia="nmhp-card-animation-asset-video" autoplay="" playsinline="" muted="" loop="">
+    <div class="relative">
+    <video class="absolute left-16 w-[10rem] h-[10rem] z-[1]" data-uia="nmhp-card-animation-asset-video" autoplay="" playsinline="" muted="" loop="">
         <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v" 
-        type="video/mp4"></video>
-    </div>
-     
+        type="video/mp4">
+       </video>
+
+        <img class="relative z-[2]" src="./assets/device-pile-in.png">
+     </div>
 </div>
 
 
@@ -220,9 +254,10 @@
 
     <div class="relative">
     
-    <video class="absolute left-28 w-[25rem] h-[20rem] z-[1]" data-uia="nmhp-card-animation-asset-video" autoplay="" playsinline="" muted="" loop="">
+       <video class="absolute left-28 w-[25rem] h-[20rem] z-[1]" data-uia="nmhp-card-animation-asset-video" autoplay="" playsinline="" muted="" loop="">
         <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v" 
-        type="video/mp4"></video>
+        type="video/mp4">
+       </video>
 
         <img class="relative z-[2]" src="./assets/device-pile-in.png">
     </div>
@@ -260,12 +295,31 @@
      <div class="md:hidden bg-black text-white mt-2 flex flex-col items-center gap-y-8 p-10">
         <h1 class="text-3xl font-bold text-center">Frequently Asked Questions</h1>
          <ul class="flex flex-col gap-y-4 items-center mx-2">
-            <li class="bg-zinc-800 w-80 p-4 hover:bg-zinc-700">What is Netflix</li>
-            <li class="bg-zinc-800 w-80  p-4 hover:bg-zinc-700">How much does Netflix cost?</li>
-            <li class="bg-zinc-800 w-80  p-4 hover:bg-zinc-700">Where can I watch?</li>
-            <li class="bg-zinc-800 w-80  p-4 hover:bg-zinc-700">How do I cancel?</li>
-            <li class="bg-zinc-800 w-80  p-4 hover:bg-zinc-700">What can I watch on Netflix?</li>
-            <li class="bg-zinc-800 w-80  p-4 hover:bg-zinc-700">Is Netflix good for kids?</li>
+            <li class="bg-zinc-800 w-80 p-4 hover:bg-zinc-700 flex justify-between items-center">What is Netflix
+                <i class="fa-solid fa-plus"></i>
+                <div>
+                    <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows,
+                    movies, anime, documentaries and more – on thousands of internet-connected devices.</p>
+
+                    <p>You can watch as much as you want, whenever you want, without a single ad – all for 
+                    one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</p>
+                </div>
+            </li>
+            <li class="bg-zinc-800 w-80  p-4 hover:bg-zinc-700 flex justify-between items-center">How much does Netflix cost?
+                <i class="fa-solid fa-plus"></i>
+            </li>
+            <li class="bg-zinc-800 w-80  p-4 hover:bg-zinc-700 flex justify-between items-center">Where can I watch?
+                <i class="fa-solid fa-plus"></i>
+            </li>
+            <li class="bg-zinc-800 w-80  p-4 hover:bg-zinc-700 flex justify-between items-center">How do I cancel?
+                <i class="fa-solid fa-plus"></i>
+            </li>
+            <li class="bg-zinc-800 w-80  p-4 hover:bg-zinc-700 flex justify-between items-center">What can I watch on Netflix?
+                <i class="fa-solid fa-plus"></i>
+            </li>
+            <li class="bg-zinc-800 w-80  p-4 hover:bg-zinc-700 flex justify-between items-center">Is Netflix good for kids?
+                <i class="fa-solid fa-plus"></i>
+            </li>
          </ul>
 
          <p class="text-center w-60">Ready to watch? Enter your email to create or restart your membership.</p>
@@ -283,12 +337,65 @@
      <div class="bg-black text-white mt-2 hidden md:flex flex-col items-center gap-y-8 p-10">
         <h1 class="text-5xl font-bold ">Frequently Asked Questions</h1>
          <ul class="flex flex-col gap-y-4">
-            <li class="bg-zinc-800 w-[75rem] p-4 hover:bg-zinc-700">What is Netflix</li>
-            <li class="bg-zinc-800 w-[75rem] p-4 hover:bg-zinc-700">How much does Netflix cost?</li>
-            <li class="bg-zinc-800 w-[75rem] p-4 hover:bg-zinc-700">Where can I watch?</li>
-            <li class="bg-zinc-800 w-[75rem] p-4 hover:bg-zinc-700">How do I cancel?</li>
-            <li class="bg-zinc-800 w-[75rem] p-4 hover:bg-zinc-700">What can I watch on Netflix?</li>
-            <li class="bg-zinc-800 w-[75rem] p-4 hover:bg-zinc-700">Is Netflix good for kids?</li>
+            <li class="bg-zinc-800 w-[75rem] p-4 hover:bg-zinc-700 flex justify-between items-center">What is Netflix
+                <i class="plus-button fa-solid fa-plus"></i>
+              
+            </li>
+
+            <div class=" mx-4 list hidden">
+                <p class="text-2xl w-[65rem]">Netflix is a streaming service that offers a wide variety of award-winning TV shows,
+                movies, anime, documentaries and more – on thousands of internet-connected devices.</p>
+
+                <p class="text-2xl w-[70rem]">You can watch as much as you want, whenever you want, without a single ad – all for 
+                one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</p>
+            </div>
+
+            <li class="bg-zinc-800 w-[75rem] p-4 hover:bg-zinc-700 flex justify-between items-center">How much does Netflix cost?
+                <i class="plus-button fa-solid fa-plus"></i>
+            </li>
+
+            <div class=" mx-4 list hidden">
+                <p class="text-2xl w-[65rem]">Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹ 149 to ₹ 649 a month. No extra costs, no contracts.</p>
+
+            </div>
+
+            <li class="bg-zinc-800 w-[75rem] p-4 hover:bg-zinc-700 flex justify-between items-center">Where can I watch?
+                <i class="plus-button fa-solid fa-plus"></i>
+            </li>
+
+            <div class=" mx-4 list hidden">
+                <p class="text-2xl w-[65rem]">Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
+                </p>
+
+                <p class="text-2xl w-[70rem]">You can also download your favourite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</p>
+            </div>
+
+            <li class="bg-zinc-800 w-[75rem] p-4 hover:bg-zinc-700 flex justify-between items-center">How do I cancel?
+                <i class="plus-button fa-solid fa-plus"></i>
+            </li>
+
+            <div class=" mx-4 list hidden">
+                <p class="text-2xl w-[65rem]">Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+
+            </div>
+            <li class="bg-zinc-800 w-[75rem] p-4 hover:bg-zinc-700 flex justify-between items-center">What can I watch on Netflix?
+                <i class="plus-button fa-solid fa-plus"></i>
+            </li>
+
+            <div class=" mx-4 list hidden">
+                <p class="text-2xl w-[65rem]">Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+
+            </div>
+
+            <li class="bg-zinc-800 w-[75rem] p-4 hover:bg-zinc-700 flex justify-between items-center">Is Netflix good for kids?
+                <i class="plus-button fa-solid fa-plus"></i>
+            </li>
+
+            <div class=" mx-4 list hidden">
+                <p class="text-2xl w-[65rem]">The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space.</p>
+
+                <p class="text-2xl w-[70rem]">Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.</p>
+            </div>
          </ul>
 
          <p class="text-xl">Ready to watch? Enter your email to create or restart your membership.</p>
@@ -392,6 +499,6 @@
         <span class="ml-32">Netflix India</span>
 </div>
 
-
+        <script src="script.js"></script>
 </body>
 </html>
