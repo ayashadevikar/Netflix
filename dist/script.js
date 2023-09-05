@@ -5,12 +5,14 @@ button.addEventListener('click', () => {
     menu.classList.toggle('hidden');
 });
 
-let btn = document.querySelectorAll('.plus-button');
-let list = document.querySelector('.list');
+let plusButtons = document.querySelectorAll('.plus-button');
 
 
-btn.forEach((btns) => {
-  btns.addEventListener('click', () => {
-        list.classList.toggle('hidden');
+
+plusButtons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    let parent = btn.parentElement;
+    let content = parent.nextElementSibling;
+    content.classList.toggle('hidden');
     })
 })
