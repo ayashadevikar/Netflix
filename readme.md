@@ -1,6 +1,6 @@
 ## Netflix-UI-Clone
 
-[!Live Link](https://netflix-clone-tailwindcss.netlify.app/)
+[Live Link](https://netflix-clone-tailwindcss.netlify.app/)
 
 ## my output
 
